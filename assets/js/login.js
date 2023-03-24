@@ -38,7 +38,7 @@ $(function () {
       password: $("#form-reg [name=password]").val(),
     };
     //发起ajax post请求
-    $.post("api/reguser", data, function (res) {
+    $.post("/api/reguser", data, function (res) {
       console.log(res);
       if (res.status !== 0) {
         // return console.log(reg.message);
@@ -56,7 +56,7 @@ $(function () {
     e.preventDefault();
     $.ajax({
       type: "POST",
-      url: "api/login",
+      url: "/api/login",
       //获取表单中的数据
       data: $(this).serialize(),
       success: function (response) {
