@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/cropperjs/1.5.13/cropper.css">
+    <link rel="stylesheet" href="/assets/lib/layui/css/layui.css">
+    <link rel="stylesheet" href="/assets/css/user_avatar.css">
+</head>
+<body>
+    <div class="layui-card">
+        <div class="layui-card-header">卡片面板</div>
+        <div class="layui-card-body">
+            <!-- 第一行的图片选择和展示区域 -->
+          <div class="row1">
+            <!-- 图片选择区域 -->
+            <div class="cropper-box">
+                <img id="image" src="/assets/images/sample.jpg" alt="">
+            </div>
+
+            <!-- 头像展示区域 -->
+            <div class="preview-box">
+                <div>
+                    <!-- 100px的头像展示区域 -->
+                    <div class="img-preview w100">
+                    </div>
+                    <p class="size">100 x 100</p>
+                </div>
+
+                    <!-- 50px的头像展示区域 -->
+                    <div class="img-preview w50">
+                    </div>
+                    <p class="size">50 x 50</p>
+                </div>
+            </div>
+          </div>
+          <!-- 按钮区域 -->
+          <div class="row2">
+            <!-- 通过accept设置选择文件类型  添加input file控件模拟选择图片  隐藏此控件 -->
+            <input type="file" id="file" accept="image/jpeg,image/png">
+            <button type="button" class="layui-btn" id="btnChooseImage">上传</button>
+            <button type="button" class="layui-btn layui-btn-danger" id="btnUpload">确认</button>
+          </div>
+        </div>
+      </div>
+
+      <script src="/assets/lib/layui/layui.all.js"></script>
+      <script src="/assets/lib/jquery.js"></script>
+<script src="https://cdn.staticfile.org/cropperjs/1.5.13/cropper.min.js"></script>
+<script src="https://cdn.staticfile.org/jquery-cropper/1.0.1/jquery-cropper.min.js"></script>
+<script src="/assets/js/baseApi.js"></script>
+<script src="/assets/js/user_avatar.js"></script>
+</body>
+</html>
